@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label for="login-pass">Contraseña</label>
-                <input type="text" name="login-pass" class="form-control" placeholder="Contraseña" required>
+                <input type="password" name="login-pass" class="form-control" placeholder="Contraseña" autocomplete="off" required>
                 <small id="login-message" class="text-mutedX text-danger"><span>Usuario o Contraseña incorrectos</span></small>
             </div>
             <div class="form-group">
@@ -34,7 +34,7 @@
     </script>
     <script src="<?php echo base_url('src/js/jquery-3.2.1.min.js')?>"></script>
     <script src="<?php echo base_url('src/js/sha1.js')?>"></script>
-    <script src="<?php echo base_url('src/js/ncLib/ncPeticion.js')?>"></script>
+    <script src="<?php echo base_url('src/js/peticion.js')?>"></script>
     <script src="<?php echo base_url('src/js/login.js')?>"></script>
 </footer>
 </html>

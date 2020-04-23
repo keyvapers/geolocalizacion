@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     if($url = getenv('BASE_URL'))
         $config['base_url'] = $url;
 
-    $config['api_url'] = $url.'api';
+    $config['api_url'] = $url.'api/';
 
 /*
 |--------------------------------------------------------------------------
@@ -435,7 +435,7 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
