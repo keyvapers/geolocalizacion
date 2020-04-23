@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/Open_Sans/OpenSans-Light.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(../fonts/Open_Sans/OpenSans-Regular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/Open_Sans/OpenSans-Bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html, body {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #00BCD4;
+}
+body #login-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 270px;
+  margin: auto;
+  max-width: 450px;
+  position: absolute;
+  width: 90%;
+}
+body #login-container #frm-login {
+  background-color: #B2EBF2;
+  border-radius: 5px;
+  color: #212121;
+  height: 100%;
+  padding: 15px 25px;
+}
+body #login-container #frm-login #login-message {
+  display: block;
+  height: 25px;
+  padding-top: 5px;
+}
+body #login-container #frm-login #login-message span {
+  display: none;
+}
+body #login-container #frm-login #btn-login {
+  background-color: #9E9E9E;
+  border: #757575;
+  color: #FFFFFF;
+  float: right;
+}
+body #login-container #frm-login #btn-login:hover {
+  background-color: #757575;
+}
+
+/*# sourceMappingURL=login.css.map */
