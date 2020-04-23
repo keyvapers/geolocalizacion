@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"pusher/pusher-php-server": "^4.1"
+		"pusher/pusher-php-server": "^4.1",
+		"chriskacerguis/codeigniter-restserver": "^3.1"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
