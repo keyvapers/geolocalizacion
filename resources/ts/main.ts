@@ -20,7 +20,8 @@ class main{
         });
 
         jQuery.extend(jQuery.validator.messages, {
-            required: "Este campo es requerido"
+            required: "Este campo es requerido",
+            equalTo: "Las contraseñas no coinciden"
         });
 
         $("#menu-mobile").toggle();
