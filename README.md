@@ -36,10 +36,10 @@ Ejemplo de actualización de datos en tiempo real.
     - lat: Latitud de la posición
     - lng: Longitud de la posición
 - Response:
-- Success:    
-    - message: Mensaje con la acción realizada
-- Error:
-    - error: Mensaje con el error
+    - Success:    
+        - message: Mensaje con la acción realizada
+    - Error:
+        - error: Mensaje con el error
 
 
 
