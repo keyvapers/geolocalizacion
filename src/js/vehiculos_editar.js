@@ -13,6 +13,7 @@ var Vehiculos_editar = (function () {
         configurable: true
     });
     Vehiculos_editar.prototype.inicializar = function () {
+        $(".modal-title").html("Editar Vehículo");
         this.getUsuarios();
         this.agregarEventoEditar();
         this.getVehiculo();

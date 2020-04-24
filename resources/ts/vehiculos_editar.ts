@@ -17,6 +17,7 @@ class Vehiculos_editar{
     }
 
     inicializar(){
+        $(".modal-title").html("Editar Vehículo");
         this.getUsuarios();
         this.agregarEventoEditar();
         this.getVehiculo();
