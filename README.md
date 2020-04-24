@@ -1,4 +1,4 @@
-# geolocalizacion
+# Geolocalizacion
 Ejemplo de actualización de datos en tiempo real.
 
 ## Especificaciones
