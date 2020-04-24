@@ -103,27 +103,27 @@ var Peticion = (function () {
         if (this._ajax)
             this._ajax.abort('User abort.');
     };
-    Peticion.prototype.put = function (api, callback) {
+    Peticion.prototype.put = function (api, callbackDone, callbackFail) {
         this._metodo = 'put';
         this._api = api;
-        this._do(callback);
+        this._do(callbackDone, callbackFail);
     };
-    Peticion.prototype.post = function (api, callback) {
+    Peticion.prototype.post = function (api, callbackDone, callbackFail) {
         this._metodo = 'post';
         this._api = api;
-        this._do(callback);
+        this._do(callbackDone, callbackFail);
     };
-    Peticion.prototype.get = function (api, callback) {
+    Peticion.prototype.get = function (api, callbackDone, callbackFail) {
         this._metodo = 'get';
         this._api = api;
-        this._do(callback);
+        this._do(callbackDone, callbackFail);
     };
-    Peticion.prototype.delete = function (api, callback) {
+    Peticion.prototype.delete = function (api, callbackDone, callbackFail) {
         this._metodo = 'delete';
         this._api = api;
-        this._do(callback);
+        this._do(callbackDone, callbackFail);
     };
-    Peticion.prototype._do = function (callback) {
+    Peticion.prototype._do = function (callbackDone, callbackFail) {
         var Ajax = {
             url: this._url + this._api,
             type: this._metodo,
@@ -137,20 +137,13 @@ var Peticion = (function () {
             Ajax.contentType = this._contentType;
         this._ajax = $.ajax(Ajax)
             .done(function (result) {
-            if (callback)
-                callback(result);
+            if (callbackDone)
+                callbackDone(result);
         })
             .fail(function (jqXHR) {
             var result = jqXHR.responseJSON || {};
-            if (result.data)
-                if (result.data.message == "Parámetros incorrectos.") {
-                    var data = result.data.data;
-                    if (callback)
-                        callback(data);
-                    return;
-                }
-            if (callback)
-                callback(result);
+            if (callbackFail)
+                callbackFail(result);
         })
             .always(function () { });
     };

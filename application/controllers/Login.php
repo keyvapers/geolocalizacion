@@ -7,21 +7,19 @@ class Login extends CI_Controller {
 		parent::__construct();
     }
      
-	public function index()
-	{
+    public function index(){
         if($this->session->userdata('userId')){
-            redirect(base_url('Welcome'),'refresh');   
+            redirect(base_url('Vehiculos'),'refresh');   
           }
-		$this->load->view('login_view');
+		    $this->load->view('login_view');
     }
     
-    public function success()
-    {
+    public function success(){
         $data  = $this->input->post();
         $data = array(
             'userId' => $this->input->post('id'),
             'username' => $this->input->post('username'),
-            'tipoUsuario' => $this->input->post('tipoUsuario')
+            'tipoUsuario' => $this->input->post('tipo_usuario_id')
         );
         $this->session->set_userdata( $data );
     }

@@ -33,6 +33,7 @@
         localStorage.url_api    = '<?php echo $this->config->item('api_url'); ?>';
     </script>
     <script src="<?php echo base_url('src/js/jquery-3.2.1.min.js')?>"></script>
+    <script src="<?php echo base_url('src/js/bootstrap/bootstrap.min.js'); ?>"></script>
     <script src="<?php echo base_url('src/js/sha1.js')?>"></script>
     <script src="<?php echo base_url('src/js/peticion.js')?>"></script>
     <script src="<?php echo base_url('src/js/login.js')?>"></script>
