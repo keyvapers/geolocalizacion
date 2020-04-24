@@ -23,10 +23,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-    if($url = getenv('BASE_URL'))
-        $config['base_url'] = $url;
+    
+    $config['base_url'] = 'http://127.0.0.1/geolocalizacion';
 
-    $config['api_url'] = $url.'api/';
+    $config['api_url'] = 'api/';
 
 /*
 |--------------------------------------------------------------------------
