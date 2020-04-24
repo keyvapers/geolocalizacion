@@ -25,13 +25,10 @@ var Login = (function () {
         this.peticion.data = { username: username, password: password };
         $('#btn-login').prop('disabled', true).addClass('loading');
         this.peticion.post('login/signin', function (result) {
-            if (result.status) {
-                App.init(result.data);
-            }
-            else {
-                $('#login-message span').html(result.error).finish().fadeIn(300).delay(3000).fadeOut();
-                $('#btn-login').prop('disabled', false).removeClass('loading');
-            }
+            App.init(result.data);
+        }, function (result) {
+            $('#login-message span').html(result.error).finish().fadeIn(300).delay(3000).fadeOut();
+            $('#btn-login').prop('disabled', false).removeClass('loading');
         });
     };
     Login.prototype.init = function (parametros) {
@@ -40,7 +37,7 @@ var Login = (function () {
         var peticion = new Peticion({ url: '', parametros: parametros });
         peticion.post(url, function () {
             location.reload();
-        });
+        }, function () { });
     };
     return Login;
 }());

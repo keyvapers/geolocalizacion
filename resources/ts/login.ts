@@ -25,12 +25,10 @@ class Login{
         this.peticion.data  = {username,password};
         $('#btn-login').prop('disabled',true).addClass('loading');
         this.peticion.post('login/signin',function(result:any){
-            if(result.status){
-                App.init(result.data);
-            }else{
-                $('#login-message span').html(result.error).finish().fadeIn(300).delay(3000).fadeOut();
-                $('#btn-login').prop('disabled', false).removeClass('loading');
-            }
+            App.init(result.data);
+        }, function(result:any){
+            $('#login-message span').html(result.error).finish().fadeIn(300).delay(3000).fadeOut();
+            $('#btn-login').prop('disabled', false).removeClass('loading');
         });
     }
 
@@ -40,7 +38,7 @@ class Login{
         let peticion = new Peticion({url:'',parametros});
         peticion.post(url,function(){
 			location.reload();
-        });
+        },function(){});
     }
 }
 new Login();
