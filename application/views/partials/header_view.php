@@ -46,6 +46,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
                 </li>
+                <?php if($this->session->userdata('tipoUsuario') == tiposUsuarios::Admin){ ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo base_url('Usuarios')?>">Usuarios</a>
+                    </li>
+                <?php } ?>
             </ul> 
         </div> 
         <a class="navbar-brand hide-mobile" href="<?php echo base_url('Login/logout')?>" id="menu-salir">Salir</a>       
