@@ -9,12 +9,6 @@ class Vehiculos extends CI_Controller {
     }
 
     public function index(){
-        /*$js = ;
-        switch($this->session->userdata('tipoUsuario')){
-            case tiposUsuarios::Admin:
-                $js->push('vehiculos_agregar');
-            break;
-        }*/
         $this->load->view('default_view',array('pagina'=>'vehiculos/index_view',
             'title'=>'Vehiculos',
             'load' => [
