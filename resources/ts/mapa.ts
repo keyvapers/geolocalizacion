@@ -266,5 +266,15 @@ class Mapa{
         let marker = this.markerArray.find(m => m.metadata == id);
         let posicion = this.latLng(lat,lng);
         marker.setPosition(posicion);
-    }
+	}
+	
+	ajustar(){
+		let latlngbounds = new google.maps.LatLngBounds();
+		this.markerArray.map(mk =>{
+			latlngbounds.extend(mk.getPosition());
+		});
+
+		this.mapa.fitBounds(latlngbounds);
+		this.mapa.setZoom((this.mapa.getZoom()));
+	}
 }

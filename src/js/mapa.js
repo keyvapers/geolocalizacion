@@ -201,6 +201,14 @@ var Mapa = (function () {
         var posicion = this.latLng(lat, lng);
         marker.setPosition(posicion);
     };
+    Mapa.prototype.ajustar = function () {
+        var latlngbounds = new google.maps.LatLngBounds();
+        this.markerArray.map(function (mk) {
+            latlngbounds.extend(mk.getPosition());
+        });
+        this.mapa.fitBounds(latlngbounds);
+        this.mapa.setZoom((this.mapa.getZoom()));
+    };
     return Mapa;
 }());
 //# sourceMappingURL=mapa.js.map
