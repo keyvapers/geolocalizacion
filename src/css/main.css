@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Open Sans Light"), local("OpenSans-Light"), url(../fonts/Open_Sans/OpenSans-Light.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url(../fonts/Open_Sans/OpenSans-Regular.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url(../fonts/Open_Sans/OpenSans-Bold.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+html, body {
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  background-color: #00BCD4;
+  min-height: 60px;
+}
+header #menu-username {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header .nav-item a {
+  color: #FFFFFF;
+}
+header .nav-item .dropdown-item {
+  color: #757575;
+}
+@media (max-width: 991px) {
+  header .hide-mobile {
+    display: none;
+  }
+}
+header #menu-salir {
+  color: #FFFFFF;
+}
+header #menu-mobile {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+  width: 100%;
+}
+header #menu-mobile ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header #menu-mobile ul li {
+  height: 45px;
+}
+header #menu-mobile ul li:hover {
+  background-color: #FFFFFF;
+}
+header #menu-mobile ul li:hover a {
+  color: #00BCD4;
+}
+header #menu-mobile ul li a {
+  color: #FFFFFF;
+  line-height: 2.6;
+  text-decoration: none;
+}
+header #btn-menu-mobile {
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  font-size: 1.8em;
+  height: 40px;
+  line-height: 0.5;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  width: 40px;
+  z-index: 99;
+}
+@media (min-width: 991px) {
+  header #btn-menu-mobile {
+    display: none;
+  }
+}
+header #btn-menu-mobile:hover, header #btn-menu-mobile:active, header #btn-menu-mobile:focus {
+  background-color: #FFFFFF;
+  color: #00BCD4;
+  outline: none;
+}
+
+footer {
+  background-color: #0097A7;
+  color: #FFFFFF;
+  height: 40px;
+  text-align: center;
+  padding: 7px;
+}
+
+.btn-primary {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #0097A7 !important;
+}
+
+body {
+  background-color: #BDBDBD47;
+}
+body #main .container {
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  margin: 5px auto;
+  max-width: calc(100% - 20px);
+  min-height: calc(100vh - 110px);
+  padding: 20px;
+}
+body #main .container .titulo-seccion {
+  color: #212121;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+body #main .container .barra-acciones {
+  margin-bottom: 10px;
+  text-align: right;
+}
+body #main .container .tabla-acciones {
+  text-align: center;
+  width: 130px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -23,11 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-if($url = getenv('BASE_URL'))
-    $config['base_url'] = $url;
- // $config['base_url'] = 'http://'.$_SERVER["SERVER_NAME"].'/geolocalizacion/';
-//if($url = getenv('BASE_URL'))
-//  $config['base_url'] = $url;
+    if($url = getenv('BASE_URL'))
+        $config['base_url'] = $url;
+
+    $config['api_url'] = $url.'api/';
+
 /*
 |--------------------------------------------------------------------------
 | Index File
@@ -435,7 +435,7 @@ $config['standardize_newlines'] = FALSE;
 |          for backwards compatibility purposes!
 |
 */
-$config['global_xss_filtering'] = FALSE;
+$config['global_xss_filtering'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
