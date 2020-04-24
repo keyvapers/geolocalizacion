@@ -33,4 +33,14 @@ class Vehiculos extends CI_Controller {
             'id' => $id
         ));
     }
+
+    public function rastrear(){
+        $this->load->view('default_view',array('pagina'=>'vehiculos/rastrear_view',
+        'title'=>'Rastrear',
+        'load' => [
+            'js'=>['mapa','pusher/pusher.min','vehiculos_rastrear'],
+            'css'=>['mapa']
+        ]
+    ), FALSE);
+    }
 }
