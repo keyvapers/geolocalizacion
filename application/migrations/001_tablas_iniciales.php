@@ -72,14 +72,14 @@ class Migration_tablas_iniciales extends CI_Migration {
                             'null' => FALSE,
                         ),
                         'lat' => array(
-                            'type' => 'DECIMAL(6,6)',
-                            'unsigned' => FALSE,
-                            'null' => FALSE,
+                            'type' => 'VARCHAR',
+                            'constraint' => '15',
+                            'null' => TRUE,
                         ),
                         'lng' => array(
-                            'type' => 'DECIMAL(6,6)',
-                            'unsigned' => FALSE,
-                            'null' => FALSE,
+                            'type' => 'VARCHAR',
+                            'constraint' => '15',
+                            'null' => TRUE,
                         )
                 ));
     
