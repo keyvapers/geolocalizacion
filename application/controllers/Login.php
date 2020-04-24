@@ -15,7 +15,6 @@ class Login extends CI_Controller {
     }
     
     public function success(){
-        $data  = $this->input->post();
         $data = array(
             'userId' => $this->input->post('id'),
             'username' => $this->input->post('username'),
