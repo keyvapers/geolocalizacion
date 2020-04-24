@@ -50,6 +50,14 @@ footer {
   padding: 7px;
 }
 
+.btn-primary {
+  background-color: #00BCD4;
+  color: #FFFFFF;
+}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: #0097A7 !important;
+}
+
 body {
   background-color: #BDBDBD47;
 }
@@ -60,6 +68,19 @@ body #main .container {
   max-width: calc(100% - 20px);
   min-height: calc(100vh - 110px);
   padding: 20px;
+}
+body #main .container .titulo-seccion {
+  color: #212121;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+body #main .container .barra-acciones {
+  margin-bottom: 10px;
+  text-align: right;
+}
+body #main .container .tabla-acciones {
+  text-align: center;
+  width: 130px;
 }
 
 /*# sourceMappingURL=main.css.map */
