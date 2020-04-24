@@ -8,6 +8,11 @@ Ejemplo de actualización de datos en tiempo real.
 - TypeScript
 - Sass
 
+## Instalacion
+1. Ejecutar en consola npm install
+2. Ejecutar en consola composer install
+3. Ejecutar en consola npm install -g typescript
+
 ## Accesos
 - Admin
     - Usuario: admin

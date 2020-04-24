@@ -20,10 +20,10 @@
         <nav>
             <ul>
                 <li>
-                    <a href="<?php echo base_url('Vehiculos')?>">Vehículos-Administrar</a>
+                    <a href="<?php echo base_url('Vehiculos')?>">Vehículos</a>
                 </li>
                 <li>
-                    <a href="<?php echo base_url('Vehiculos/Rastrear')?>">Vehículos-Rastrear</a>
+                    <a href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
                 </li>
                 <li>
                     <a href="<?php echo base_url('Login/logout')?>">Salir</a>
@@ -38,14 +38,13 @@
         </button>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="vehiculosLinkMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('Vehiculos')?>" id="vehiculosLinkMenu">
                         Vehículos
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="vehiculosLinkMenu">
-                        <a class="dropdown-item" href="<?php echo base_url('Vehiculos')?>">Administrar</a>
-                        <a class="dropdown-item" href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
-                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
                 </li>
             </ul> 
         </div> 

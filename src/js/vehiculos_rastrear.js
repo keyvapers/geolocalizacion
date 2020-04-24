@@ -84,9 +84,11 @@ var Vehiculos_rastrear = (function () {
                 _this.markers.push(markerV);
             }
         });
+        this.mapa.ajustar();
     };
     Vehiculos_rastrear.prototype.actualizarMarker = function (ve) {
         this.mapa.actualizarPosicionMarker(ve.id, ve.lat, ve.lng);
+        this.mapa.ajustar();
     };
     return Vehiculos_rastrear;
 }());

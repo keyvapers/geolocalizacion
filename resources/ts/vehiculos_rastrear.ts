@@ -88,10 +88,12 @@ class Vehiculos_rastrear{
                 this.markers.push(markerV);
             }
         });
+        this.mapa.ajustar();
     }
 
     actualizarMarker(ve:vehiculo){
         this.mapa.actualizarPosicionMarker(ve.id, ve.lat, ve.lng); 
+        this.mapa.ajustar();
     }
 }
 
