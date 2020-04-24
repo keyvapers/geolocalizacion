@@ -25,6 +25,11 @@
                 <li>
                     <a href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
                 </li>
+                <?php if($this->session->userdata('tipoUsuario') == tiposUsuarios::Admin){ ?>
+                    <li>
+                        <a href="<?php echo base_url('Usuarios')?>">Usuarios</a>
+                    </li>
+                <?php } ?>
                 <li>
                     <a href="<?php echo base_url('Login/logout')?>">Salir</a>
                 </li>
