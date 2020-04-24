@@ -7,7 +7,9 @@
     </script>
     <script src="<?php echo base_url('src/js/jquery-3.2.1.min.js')?>"></script>
     <script src="<?php echo base_url('src/js/bootstrap/bootstrap.min.js'); ?>"></script>
+    <script src="<?php echo base_url('src/js/jquery.validate.min.js')?>"></script>
     <script src="<?php echo base_url('src/js/peticion.js')?>"></script>
+    <script src="<?php echo base_url('src/js/main.js')?>"></script>
     <?php 
         if($js)
             foreach ($js as $url) {
