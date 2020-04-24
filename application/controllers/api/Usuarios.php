@@ -8,6 +8,7 @@ class Usuarios extends RestController {
     function __construct()
     {
         parent::__construct();
+        $this->load->database();
     }
 
     public function listar_get(){

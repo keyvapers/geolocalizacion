@@ -7,6 +7,8 @@ class Login extends RestController {
     function __construct()
     {
         parent::__construct();
+        $this->load->database();
+
     }
 
     public function signin_post(){
