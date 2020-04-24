@@ -5,10 +5,8 @@ type vehiculo = {
     marca       :string;
     color       :string;
     modelo      :string;
-    posicion : {
-        lat :number,
-        lng :number
-    };
+    lat         :number;
+    lng         :number;
     usuario_id  :number;
     username    :string;
 }
