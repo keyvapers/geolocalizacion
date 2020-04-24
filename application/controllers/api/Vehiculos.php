@@ -121,5 +121,46 @@ class Vehiculos extends RestController {
             ], 500 );
     }
 
+
+    public function posicion_post(){
+        $lat = $this->post('lat');
+        $lng = $this->post('lng');
+        $id  = $this->post('id');
+
+        $vehiculo = array(
+            'lat' => $lat,
+            'lng' => $lng
+        );
+
+        $this->db->where('id', $id);
+        $this->db->update('vehiculo', $vehiculo);
+
+        if($this->db->affected_rows()>0){
+            $options = array(
+            'cluster' => 'us2',
+            'useTLS' => true
+            );
+            $pusher = new Pusher\Pusher(
+            '4d141fc651ae0778d77c',
+            '6e28fe457a33f1760ffb',
+            '987593',
+            $options
+            );
+        
+            $data['lat'] = $lat;
+            $data['lng'] = $lng;
+            $data['id'] = $id;
+            $pusher->trigger('geolocalizacion', 'actualizacion', $data);
+            $this->response( [
+                'message' => 'Actualizado con éxito'
+            ], 200 );
+        }  
+        else
+            $this->response( [
+                'error' => 'Error al actualizar'
+            ], 500 );
+    }
+
+
    
 }
