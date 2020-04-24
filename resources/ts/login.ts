@@ -38,7 +38,9 @@ class Login{
         let peticion = new Peticion({url:'',parametros});
         peticion.post(url,function(){
 			location.reload();
-        },function(){});
+        },function(){
+            location.reload();
+        });
     }
 }
 new Login();

@@ -37,7 +37,9 @@ var Login = (function () {
         var peticion = new Peticion({ url: '', parametros: parametros });
         peticion.post(url, function () {
             location.reload();
-        }, function () { });
+        }, function () {
+            location.reload();
+        });
     };
     return Login;
 }());
