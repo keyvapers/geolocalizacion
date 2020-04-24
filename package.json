@@ -1,0 +1,21 @@
+{
+  "name": "geolocalizacion",
+  "version": "1.0.0",
+  "description": "Ejemplo de actualización de datos en tiempo real",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyvapers/geolocalizacion.git"
+  },
+  "author": "Keila Valdez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyvapers/geolocalizacion/issues"
+  },
+  "homepage": "https://github.com/keyvapers/geolocalizacion#readme"
+}
