@@ -4,7 +4,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Vehiculos extends CI_Controller {
 
     public function __construct(){
-		parent::__construct();
+        parent::__construct();
+        validarSesion();
     }
 
     public function index(){
