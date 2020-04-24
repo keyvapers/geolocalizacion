@@ -155,30 +155,27 @@ class Peticion{
 		if (this._ajax)
 			this._ajax.abort('User abort.');
 	 }
-	put(api:string,callback:Function){
+	put(api:string,callbackDone:Function,callbackFail:Function){
 		this._metodo	= 'put';
 		this._api		= api;
-		this._do(callback);
+		this._do(callbackDone,callbackFail);
 	 }
-	post(api:string,callback:Function){
+	post(api:string,callbackDone:Function,callbackFail:Function){
 		this._metodo	= 'post';
 		this._api		= api;
-		this._do(callback);
+		this._do(callbackDone,callbackFail);
 	 }
-	get(api:string,callback:Function){
+	get(api:string,callbackDone:Function,callbackFail:Function){
 		this._metodo	= 'get';
 		this._api		= api;
-		this._do(callback);
+		this._do(callbackDone,callbackFail);
 	 }
-	delete(api:string,callback:Function){
+	delete(api:string,callbackDone:Function,callbackFail:Function){
 		this._metodo	= 'delete';
 		this._api		= api;
-		this._do(callback);
+		this._do(callbackDone,callbackFail);
 	 }
-	_do(callback:Function){
-	 	// if(this._api)
-	 		// this._api = "/"+this._api;
-		//let App		= this;
+	_do(callbackDone:Function,callbackFail:Function){
 	 	let Ajax:any={
 			url			: this._url+this._api,
 			type		: this._metodo,
@@ -192,22 +189,13 @@ class Peticion{
 			Ajax.contentType=this._contentType;
 		this._ajax=$.ajax(Ajax)
 		.done((result:ajaxResult)=>{
-				// if (!result)
-					// result = { success: false }
-				if (callback)
-					callback(result);
+				if (callbackDone)
+					callbackDone(result);
 			})
 		.fail((jqXHR:any)=>{
 			let result	= jqXHR.responseJSON	|| {};
-			if(result.data)
-				if(result.data.message	==	"Parámetros incorrectos."){
-					let data	= result.data.data;
-					if (callback)
-						callback(data);
-					return ;
-				}
-			if (callback)
-				callback(result);
+			if (callbackFail)
+				callbackFail(result);
 		 })
 		.always(()=>{ });
 	 }
