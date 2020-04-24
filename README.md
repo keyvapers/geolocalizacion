@@ -13,6 +13,9 @@ Ejemplo de actualización de datos en tiempo real.
 2. Ejecutar en consola composer install
 3. Ejecutar en consola npm install -g typescript
 
+# Migracion
+1. Acceder a la url /Migrate
+
 ## Accesos
 - Admin
     - Usuario: admin
