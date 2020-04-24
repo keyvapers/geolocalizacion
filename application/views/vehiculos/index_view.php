@@ -5,7 +5,9 @@
 </div>
 <div class="row barra-acciones">
     <div class="col-12">
-        <a class="btn btn-primary modal-link" href="<?php echo base_url('Vehiculos/Agregar');?>">Agregar</a>
+        <?php if($this->session->userdata('tipoUsuario') == tiposUsuarios::Admin){ ?>
+            <a class="btn btn-primary modal-link" href="<?php echo base_url('Vehiculos/Agregar');?>">Agregar</a>
+        <?php } ?>
     </div>
 </div>
 <div class="row">
@@ -18,8 +20,10 @@
                     <th>Marca</th>
                     <th>Color</th>
                     <th>Modelo</th>
-                    <th>Usuario</th>
-                    <th></th>
+                    <?php if($this->session->userdata('tipoUsuario') == tiposUsuarios::Admin){ ?>
+                        <th>Usuario</th>
+                        <th></th>
+                    <?php } ?>
                 </tr>
             </thead>
             <tbody>
