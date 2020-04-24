@@ -1,0 +1,29 @@
+{
+  "name": "geolocalizacion",
+  "version": "1.0.0",
+  "description": "Ejemplo de actualización de datos en tiempo real",
+  "main": "index.js",
+  "dependencies": {
+    "@types/bootstrap": "^4.3.2",
+    "@types/googlemaps": "^3.39.3",
+    "@types/jquery": "^3.3.35",
+    "@types/jquery.validation": "^1.16.6",
+    "@types/sizzle": "^2.3.2",
+    "node-sass": "^4.14.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keyvapers/geolocalizacion.git"
+  },
+  "author": "Keila Valdez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keyvapers/geolocalizacion/issues"
+  },
+  "homepage": "https://github.com/keyvapers/geolocalizacion#readme"
+}
