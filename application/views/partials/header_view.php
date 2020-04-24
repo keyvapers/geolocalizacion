@@ -25,8 +25,8 @@
                         Vehículos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="vehiculosLinkMenu">
-                        <a class="dropdown-item" href="#">Administrar</a>
-                        <a class="dropdown-item" href="#">Rastrear</a>
+                        <a class="dropdown-item" href="<?php echo base_url('Vehiculos')?>">Administrar</a>
+                        <a class="dropdown-item" href="<?php echo base_url('Vehiculos/Rastrear')?>">Rastrear</a>
                     </div>
                 </li>
             </ul> 
