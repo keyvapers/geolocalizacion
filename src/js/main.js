@@ -17,6 +17,19 @@ var main = (function () {
         jQuery.extend(jQuery.validator.messages, {
             required: "Este campo es requerido"
         });
+        $("#menu-mobile").toggle();
+        $("#btn-menu-mobile").click(function (e) {
+            e.preventDefault();
+            $("#menu-mobile").toggle("slow");
+        });
+        $("#menu-mobile a").click(function (e) {
+            $(this).each(function () {
+                var sectionTop = $(this.hash).offset().top;
+                $("html, body").animate({
+                    scrollTop: sectionTop
+                }, 1500);
+            });
+        });
     };
     return main;
 }());
