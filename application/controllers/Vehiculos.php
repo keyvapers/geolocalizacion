@@ -13,7 +13,7 @@ class Vehiculos extends CI_Controller {
             'title'=>'Vehiculos',
             'load' => [
                 'js'=>['datatable/jquery.dataTable.min','vehiculos_catalogo'],
-                'css'=>['datatable/jquery.dataTable.min']
+                'css'=>['datatable/jquery.dataTable.min','vehiculos']
             ]
         ), FALSE);
         

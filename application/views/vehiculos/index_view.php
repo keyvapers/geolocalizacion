@@ -15,13 +15,13 @@
         <table class="table table-bordered table-stripped" id="tabla-vehiculos">
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th class="hide-sm">Id</th>
                     <th>Placas</th>
-                    <th>Marca</th>
-                    <th>Color</th>
-                    <th>Modelo</th>
+                    <th class="hide-sm">Marca</th>
+                    <th class="hide-m hide-sm">Color</th>
+                    <th class="hide-sm">Modelo</th>
                     <?php if($this->session->userdata('tipoUsuario') == tiposUsuarios::Admin){ ?>
-                        <th>Usuario</th>
+                        <th class="hide-m hide-sm">Usuario</th>
                         <th></th>
                     <?php } ?>
                 </tr>

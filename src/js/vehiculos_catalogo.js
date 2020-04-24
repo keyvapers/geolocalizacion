@@ -40,9 +40,9 @@ var Vehiculos_catalogo = (function () {
         var rows = "";
         if (vehiculos.length > 0) {
             vehiculos.map(function (ve) {
-                rows += "<tr>\n                            <td>" + ve.id + "</td>\n                            <td>" + ve.placas + "</td>\n                            <td>" + ve.marca + "</td>\n                            <td>" + ve.color + "</td>\n                            <td>" + ve.modelo + "</td>";
+                rows += "<tr>\n                            <td class=\"hide-sm\">" + ve.id + "</td>\n                            <td>" + ve.placas + "</td>\n                            <td  class=\"hide-sm\">" + ve.marca + "</td>\n                            <td class=\"hide-m hide-sm\">" + ve.color + "</td>\n                            <td  class=\"hide-sm\">" + ve.modelo + "</td>";
                 if (_this.user.tipoUsuario == 1)
-                    rows += "<td>" + ve.username + "</td>\n                            <td class=\"tabla-acciones\">\n                                <a class=\"btn btn-primary btn-edit modal-link\" href=\"" + _this.base_url + "Vehiculos/Editar/" + ve.id + "\"><i class=\"mdi mdi-pencil\"></i></a>\n                                <button class=\"btn btn-primary btn-delete\" data-id=\"" + ve.id + "\"><i class=\"mdi mdi-delete\"></i></button>\n                            </td>";
+                    rows += "<td class=\"hide-m hide-sm\">" + ve.username + "</td>\n                            <td class=\"tabla-acciones\">\n                                <a class=\"btn btn-primary btn-edit modal-link\" href=\"" + _this.base_url + "Vehiculos/Editar/" + ve.id + "\"><i class=\"mdi mdi-pencil\"></i></a>\n                                <button class=\"btn btn-primary btn-delete\" data-id=\"" + ve.id + "\"><i class=\"mdi mdi-delete\"></i></button>\n                            </td>";
                 rows += "</tr>";
             });
             $("#tabla-vehiculos tbody").html(rows);
