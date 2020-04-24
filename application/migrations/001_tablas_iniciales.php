@@ -130,7 +130,7 @@ class Migration_tablas_iniciales extends CI_Migration {
                         )
                     );
                 
-                $this->db->insert_batch('Usuario', $data); 
+                $this->db->insert_batch('usuario', $data); 
         
         }
 
