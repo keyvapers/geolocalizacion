@@ -31,6 +31,6 @@
                 </li>
             </ul> 
         </div> 
-        <a class="navbar-brand" href="#" id="menu-salir">Salir</a>       
+        <a class="navbar-brand" href="<?php echo base_url('Login/logout')?>" id="menu-salir">Salir</a>       
     </nav>
 </header>
