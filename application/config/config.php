@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     
     $config['base_url'] = 'http://127.0.0.1/geolocalizacion';
 
-    $config['api_url'] = 'api/';
+    $config['api_url'] = 'http://127.0.0.1/geolocalizacion/api/';
 
 /*
 |--------------------------------------------------------------------------
