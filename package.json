@@ -9,7 +9,7 @@
     "@types/jquery": "^3.3.35",
     "@types/jquery.validation": "^1.16.6",
     "@types/sizzle": "^2.3.2",
-    "node-sass": "^4.14.0",
+    "node-sass": "^9.0.0",
     "typescript": "^3.8.3"
   },
   "devDependencies": {},
